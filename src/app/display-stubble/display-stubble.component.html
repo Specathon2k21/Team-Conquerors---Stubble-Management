@@ -1,0 +1,126 @@
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        
+
+</head>
+<!--<legend><a class="text-info" routerLink="/cartItems">Show my orders</a></legend>
+<div class="container">
+    <table class="table table-bordered table-striped table-hover table-sm text-center">
+        <thead>
+            <tr class="bg-info text-white">
+                <th>PRODUCT ID</th>
+                <th>PRODUCT NAME</th>
+                <th>QUANTITY IN TONNES</th>
+                <th>PRICE</th>
+                <th>FARMER NAME</th>
+                <th>ADD TO CART</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let product of lproducts'>
+                <td>{{product.productId}}</td>
+                <td>{{product.productName | uppercase}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.price| currency:'INR'}}</td>
+                <td>{{product.farmer.farmerName}}</td>
+               <td><button (click)="addToCartItems(product)" class="glyphicon glyphicon-shopping-cart"></button>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>-->
+
+
+
+<!--Trail for tables-->
+
+
+<div class="bgg">
+    <br/><br/>
+<div class="container-xl">
+    
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                        <a class="navbar-brand" href="#">Products List</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                          <div class="navbar-nav">
+                            <a class="nav-item nav-link active" routerLink="/cartItems"><b>Show Cart Items</b></a>
+                            <a class="nav-item nav-link" routerLink="/comfirmedOrders" ><b>Confirmed Orders</b></a>
+                            <a class="nav-item nav-link"  routerLink="/demo" ><b>Logout</b></a>
+                        
+                          </div>
+                        </div>
+                      </nav>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <!--<h2 style="text-align: right;"><b>Products List</b></h2>
+                          <h5><a class="text" style="color:whitesmoke;" routerLink="/cartItems" >Show Cart Items</a></h5>-->
+                         <!-- <h2><b>Products List</b>
+                          <button style="color :black; font-size: 20px;"class="btn btn-link" routerLink="/cartItems" ><b>Show Cart Items</b></button>
+                          <button style="color :black; font-size: 20px;"class="btn btn-link" routerLink="/comfirmedOrders" ><b>Confirmed Orders</b></button>
+                          <button style = "margin-right: -700px;"class="btn btn-primary" routerLink="/demo" >Logout</button></h2>-->
+                         
+                        </div>
+                        
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                            <input type="text" class="form-control" name="searchString" placeholder="Search Product Name" [(ngModel)]="searchString">
+                        </div>
+                    </div>
+                </form>
+                
+
+                <table class="table table-striped table-hover ">
+                   
+                    <thead>
+                        <tr class="table-primary">
+                           
+                            <th>PRODUCT NAME</th>
+                            <th>QUANTITY IN TONES</th>
+                            <th>PRICE PER TONN</th>
+                            <th>FARMER NAME</th>
+                            <th>FARMER LOCATION</th>
+                            <th>ADD TO CART</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor= "let product of lproducts | filter : 'productName' : searchString; let i = index">
+                           
+                            <td>{{product.productName | uppercase}}</td>
+                            <td>{{product.quantity}}</td>
+                            <td>{{product.price| currency:'INR'}}</td>
+                            <td>{{product.farmer.farmerName}}</td>
+                            <td>{{product.farmer.address}}</td>
+                           <td><button (click)="addToCartItems(product)" class="glyphicon glyphicon-shopping-cart"></button>
+                           
+                        </tr>
+                    </tbody>
+                 </table>    
+                 </div>
+                 
+        </div>
+        
+</div>   
+
+
+                
+</div>
+    
+   
+
+

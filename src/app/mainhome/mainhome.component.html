@@ -1,0 +1,62 @@
+<!--
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-link" routerLink="moreInfo" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: green;">KNOW MORE<span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="FarmerLogin" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color:green">FARMER LOGIN </a>
+        <a class="nav-link" routerLink="VendorLogin" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: green;">VENDORLOGIN </a>
+        <a class="nav-link" routerLink="cartItems" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif; color:green">SHOW CART ITEMS</a>
+
+    </div>
+
+    <div id="main">
+        
+        <span class="sr-only">(current)</span>
+        <div>
+        <span style="font-size:20px; font-family:Arial, Helvetica, sans-serif; color:green; cursor: pointer" onclick="openNav()">&#9776; Stubble Management</span> 
+        <div class="navbar-nav ml-auto" id="google_translate_element"></div> 
+        </div>
+    </div>
+-->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light"  >
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/logo.png" alt="logo" style="width:120px ; height:60px">
+  </a>
+  <div class="container">
+    <a class="navbar-brand" href="#" style="margin-right:20px;">Stubble Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="moreInfo" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;" >More Information</a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="FarmerLogin" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Farmer</a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link "  routerLink="VendorLogin" style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;">Manufacturer</a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+         <!-- <a class="nav-link disabled"  style="font-size: 18px; font-family: Arial, Helvetica, sans-serif;" >Show Cart Items</a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item" *ngIf="service.getFarmerLogged()">
+          <a class="nav-link" routerLink="FarmerLogin" >log Out</a>
+        </li>-->
+  
+        <li class="nav-item">
+          <a class="navbar-link" id="google_translate_element"></a> 
+        </li>
+      </ul>
+      
+    </div>
+    </div>
+  </nav>

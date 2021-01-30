@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<div class="bg"><br/><br/>
+  
+    <form  style="margin-left: 35%; margin-right:25%;">
+       <div class="form-group w-75">
+        
+            <div class="input-group">
+            <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+            <input type="text" class="form-control" name="searchString" placeholder="Search Product Name" [(ngModel)]="searchString">
+            </div>
+            
+        </div>
+    </form>
+
+<div class="container">
+    <table class="table table-bordered table-sm text-center">
+        <thead>
+            <tr class="bg-info">
+                <th>PRODUCT ID</th>
+                <th>PRODUCT NAME</th>
+                <th>QUANTITY IN TONNES</th>
+                <th>PRICE</th>
+                <th>STATUS</th>
+                <th>DELETE</th>
+               
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-light" *ngFor="let product of AddedProducts | filter : 'productName' : searchString; let i = index">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName | uppercase}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.price| currency:'INR'}}</td>
+                <td>{{product.status}}</td>
+                <td><button (click)="deleteProduct(product)" class="glyphicon glyphicon-trash"></button></td>
+                
+               
+            </tr>
+        </tbody>
+    </table>  
+</div>
+</div>

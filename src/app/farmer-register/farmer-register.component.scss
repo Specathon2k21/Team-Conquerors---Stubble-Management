@@ -1,0 +1,81 @@
+/*.bg {
+    /* The image used */
+    //background-image: url("src/assets/images/home3.jpg");
+    /* Full height */
+    //height: 600px;
+    //width:100%;
+    /* Center and scale the image nicely */
+    /*background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }*/
+
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  body{
+    background-image: url("src/assets/images/anuhya.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: new 'Times New Roman', Times, serif;
+    height: 590px;
+    //width:100%;
+  }
+  h1{
+    font-size:40px;
+    color: black;
+    margin-top: 250px;
+  }
+  p{
+    
+      font-size:20px;
+      color: black;
+      font-family: new 'Times New Roman', Times, serif;
+     // margin-top: 250px;
+    
+  }
+  h3{
+    font-size: 25px;
+    margin-top: 25px;
+  }
+  .glyphicon-pencil{
+    font-size: 35px;
+    float:right;
+    margin-top: 20px;
+  }
+  .col-md-5{
+    margin-top: 80px;
+    box-shadow: 1px 1px 60px 10px black;
+    background: rgba(0,0,0,0.4);
+    height:472px;
+    //color: white;
+  }
+  .label{
+    font-weight: normal;
+    margin-top: 15px;
+    color: white;
+    font-size: 15px;
+  }
+  .form-control{
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid white;
+    font-size: 15px;
+    margin-top: 10px;
+    height:40px;
+    color:black;
+
+  }
+  .form-control1{
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    //border-bottom: 1px solid white;
+    font-size: 15px;
+    margin-top: 10px;
+    height:40px;
+    color:black;
+
+  }

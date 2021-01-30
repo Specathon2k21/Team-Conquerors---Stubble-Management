@@ -1,0 +1,60 @@
+<!DOCTYPE htnl>
+<html lang="en">
+    <head>
+        <meta charset="viewport" content="width=device-width , initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <title>Login Form</title>
+    </head>
+    <body>
+      
+        <div class=bgg>
+            <div class="row">
+               
+                <div class="col-lg-5-m-auto">
+                    
+                    <div class="card mt-7 bg-dark">
+                        <div class="card-title text-center mt-5">
+                            <img src="assets\images\farmer2.webp" width="150px" height="150px">
+                        </div>
+                        <div class="card-body"><br/>
+                            
+                            <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" nonvalidate>
+                                
+                                 <div class="input-group mb-4">
+                                     <div class="input-group-addon">
+                                         <span class="input-group-text">
+                                             <i class="glyphicon glyphicon-text-background 3x"></i>
+                                         </span>
+                                     </div>
+                                     
+                                     <input type="text" class="form-control py-4" placeholder="Enter Aadhar number" name="aadhar" [(ngModel)]="user.aadhar">
+                                 </div><br/>
+                                 <div class="input-group mb-4">
+                                    <div class="input-group-addon">
+                                        <span class="input-group-text">
+                                            <i class="glyphicon glyphicon-lock 3x"></i>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="form-control py-4" placeholder="Enter password" name="password" [(ngModel)]="user.password">
+                                </div>                                
+                                <button class="btn btn-success login-Btn" [disabled]="!loginForm.valid">Login</button><br/>
+                                <h5 style = "color:white; text-align:center">CREATE NEW ACCOUNT</h5>
+                                <button class="btn btn-primary reg-but" routerLink="FarmerRegister">Register</button>
+                                
+                            
+                           
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+                       
+
+
+

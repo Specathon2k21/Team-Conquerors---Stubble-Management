@@ -1,0 +1,52 @@
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<div class="bgg">
+    <br/><br/>
+<div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <!--<h2 style="text-align: right;"><b>Products List</b></h2>
+                          <h5><a class="text" style="color:whitesmoke;" routerLink="/cartItems" >Show Cart Items</a></h5>-->
+                          <h2><b>Confirmed Orders List</b>
+                         <button style = "margin-right: -500px;"class="btn btn-primary" routerLink="/Displayproducts" >continue shopping</button></h2>
+                         
+                        </div>
+                        
+                    </div>
+                </div>
+               
+                
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr class="table-primary">   
+            <th>PRODUCT NAME</th>
+            <th>FARMER NAME</th>
+            <th>FARMER ADDRESS</th>
+            <th>QUANTITY IN TONES</th>
+            <th>PRICE PER TONN</th>
+            <th>DATE OF DELIVERY</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of confirmedOrders">      
+            <td>{{item.product.productName | uppercase}}</td>
+            <td>{{item.product.farmer.farmerName}}</td>
+            <td>{{item.product.farmer.address}}</td>
+             <td>{{item.quantity}}</td>
+             <td>{{item.price | currency: 'INR'}}</td>
+             <td>{{item.dateOfDelivery | date : 'shortDate'}}</td>
+            
+            
+        </tr>
+    </tbody>
+ </table> 
+</div>

@@ -1,0 +1,69 @@
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+   
+</head>
+<!--<div class="bg">
+<div class="container" align="center">
+    <fieldset>
+        <legend>Add Stubble &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a routerLink="/showfarmerprducts">Show My Orders</a></legend>
+        
+        
+
+        <form #StubbleForm="ngForm" nonvalidate>
+            Enter Stubble Name : <input type="text" name="productName" [(ngModel)]="product.productName"><br /><br />
+            Enter Quantity in Tonnes : <input type="number" name="quantity" [(ngModel)]="product.quantity"><br /><br />
+            Enter Price : <input type="number" name="price" [(ngModel)]="product.price"><br /><br />
+            
+
+            <button [disabled]="!StubbleForm.valid" (click)="StubbleSubmit()"> Add Stubble </button>
+        </form>
+    </fieldset>
+   
+
+</div>-->
+
+
+<body>
+<div class="wrapper">
+    <div class="title">ADD STUBBLE Form &nbsp;&nbsp;&nbsp;
+        <a routerLink="/showfarmerprducts">Show My Orders</a>&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-default btn-sm" routerLink="/demo">
+            <span class="glyphicon glyphicon-log-out" ></span> Log out</button>
+  
+
+    </div>
+    <div class="form">
+    <form #StubbleForm="ngForm" nonvalidate>
+       <div class="inputfield">
+          <label>Stubble Name</label>
+          <input type="text" class="input" name="productName" [(ngModel)]="product.productName">
+       </div>  
+        <div class="inputfield">
+          <label>Quantity in Tonnes</label>
+          <input type="number" class="input" name="quantity" [(ngModel)]="product.quantity">
+       </div>  
+       <div class="inputfield">
+          <label>Price per Ton</label>
+          <input type="number" class="input" name="price" [(ngModel)]="product.price">
+       </div>  
+       
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" [disabled]="!StubbleForm.valid" (click)="StubbleSubmit()" value="Add To Cart" class="btn">
+        
+      </div>
+    </form>
+    </div>
+</div>
+</body>
+
+

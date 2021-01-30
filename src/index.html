@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://apis.google.com/js/client.js?onload=checkAuth" gapi_processed="true"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proper.js/1.14.7/umd/proper.min.js"></script>
+<script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!--<script
+src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256–2z0P7MLoyxByUtvAk/xjkmindefS4auh4Pfzbm7y6g0=" crossorigin=”anonymous”> 
+</script> 
+-->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+  </script>
+  <script>
+    document.getElementById("vendorreg").onclick = function () {
+    window.location.hash = "tab-1";};
+  </script>
+  <meta charset="utf-8">
+  <title>App</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!--Trial for tables display-->
+<!-- <script>
+    $(document).ready(function(){
+      // Activate tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+      
+      // Select/Deselect checkboxes
+      var checkbox = $('table tbody input[type="checkbox"]');
+      $("#selectAll").click(function(){
+        if(this.checked){
+          checkbox.each(function(){
+            this.checked = true;                        
+          });
+        } else{
+          checkbox.each(function(){
+            this.checked = false;                        
+          });
+        } 
+      });
+      checkbox.click(function(){
+        if(!this.checked){
+          $("#selectAll").prop("checked", false);
+        }
+      });
+
+      $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+    });
+    </script>-->
+    
+    <script type="text/javascript">
+      function AadharValidate() {
+          var aadhar = document.getElementById("txtAadhar").value;
+          var adharcardTwelveDigit = /^\d{12}$/;
+          var adharSixteenDigit = /^\d{16}$/;
+          if (aadhar != '') {
+              if (aadhar.match(adharcardTwelveDigit)) {
+                  return true;
+              }
+              else if (aadhar.match(adharSixteenDigit)) {
+                  return true;
+              }
+              else {
+                  alert("Enter valid Aadhar Number");
+                  return false;
+              }
+          }
+      }
+  </script>
+
+
+  
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>
